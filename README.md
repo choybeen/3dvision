@@ -1,8 +1,9 @@
 # 3dvision
- vision based on opencv/opencl/opengl/vtk
+ 3d vision based on opencv/opencl/opengl/vtk
+
+ ## calibration for 1/2/3 camera
+ ## image rectifying from fast mapping/warping
+ ## stereo visual with opencl/opengl/vtk
+ ## visual slam based on 3d vision 
+ ## robot arm 
  
-## one camera calibration
-** 1) bshowcalib=false, for calibrate **
-** 2)bshowcalib=false,  for show result, read map matrix from file **
- ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/calibration/Capture.JPG)
-Format: ![Alt Text](url)
