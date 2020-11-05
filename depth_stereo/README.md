@@ -1,17 +1,9 @@
 # 3dvision
  vision based on opencv/opencl/opengl/vtk
  
-## one camera calibration
-** 1) bshowcalib=false, for calibrate **
-** 2)bshowcalib=false,  for show result, read map matrix from file **
- ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/calibration/Capture.JPG)
-Format: ![Alt Text](url)
-
-## two camera calibration
-** 1)  calib_stereodepth_calibration : for calibration **
-	//std::thread thread_calibrating(calib_stereodepth_calibration);  
-** 2)  calibed_stereodepth_rectifyimage  :  for result showing **
-	std::thread thread_calibrating(calibed_stereodepth_rectifyimage);    
- ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/calibration/Capture5.JPG)
-Format: ![Alt Text](url)
-
+##  match difference from two images, stereo vision for self-driving
+** 1) compare difference **
+** 2) conver diff into depth **
+** 3) show depth with viz/VTK **
+ ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Captured3.JPG?raw=true)
+ [![Fibonacci RMI Java EE](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Captured4.JPG?raw=true)](https://youtu.be/OIW2UMj6u9w)
