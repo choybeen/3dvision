@@ -152,8 +152,8 @@ Params::Params()
 Params Params::read()
 {
     Params p;
-    p.left = "D:\\jupyterNote\\Zoo_Data\\stereo_drivers\\2018-07-09-16-11-56\\2018-07-09-16-11-56_left";
-    p.right = "D:\\jupyterNote\\Zoo_Data\\stereo_drivers\\2018-07-09-16-11-56\\2018-07-09-16-11-56_right";
+    p.left = "left_imgs";
+    p.right = "right_imgs";
     p.method = BM; // BP CSBP
     p.ndisp = 24;
     return p;

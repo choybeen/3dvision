@@ -64,9 +64,9 @@ int viz3dshowdepth(viz::Viz3d myWindow, Mat imggray, Mat imgcolor, Mat disparity
 int stereo_match_depth_filter()
 {
 	//1,Load left and right views
-	cv::String GT_path = "E:/MyProjects/OpenCV/images/ambush_5_bm_with_filter.png";
-	cv::String sleft = "D:\\jupyterNote\\Zoo_Data\\stereo_drivers\\2018-07-09-16-11-56\\2018-07-09-16-11-56_left";
-	cv::String sright = "D:\\jupyterNote\\Zoo_Data\\stereo_drivers\\2018-07-09-16-11-56\\2018-07-09-16-11-56_right";
+	// the entire dataset could download from https://drivingstereo-dataset.github.io/
+	cv::String sleft = "left_imgs";  //path to left images
+	cv::String sright = "right_imgs";  //path to right images
 	vector<cv::String> fnl, fnr;
 	cv::glob(sleft, fnl, true); // recurse
 	cv::glob(sright, fnr, true); // recurse
