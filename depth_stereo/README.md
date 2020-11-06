@@ -21,14 +21,15 @@
 
  ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Capturef.JPG?raw=true)
 
-###  using left to right match, and right to left match, pair matcher has better disparity
+1. using left to right match, and right to left match, pair matcher has better disparity
 Ptr<StereoBM> left_matcher = StereoBM::create(max_disp, wsize);
 Ptr<DisparityWLSFilter> wls_filter = createDisparityWLSFilter(left_matcher);
 Ptr<StereoMatcher> right_matcher = createRightMatcher(left_matcher);
-	
-then filter :
+		
+2. then filter :
 wls_filter->filter(left_disp, left, filtered_disp, right_disp);
-then convert disparity to image for showing:
+
+3. then convert disparity to image for showing:
 Mat filtered_disp_vis;
 getDisparityVis(filtered_disp, filtered_disp_vis, vis_mult);
 
