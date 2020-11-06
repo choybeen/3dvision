@@ -11,6 +11,7 @@
 ** 3) show depth with viz/VTK **
  ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Captured4.JPG?raw=true)
  
+ [![Fibonacci RMI Java EE](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Capturev0.JPG?raw=true)](https://youtu.be/OIW2UMj6u9w)
 
  ## depth cloud data filter to more smooth view
  in  stereo_match_depth_filter.cpp, getDisparityVis filter the disparity result to smooth 
