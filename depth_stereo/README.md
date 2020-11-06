@@ -1,6 +1,8 @@
 # 3dvision
  vision based on opencv/opencl/opengl/vtk
  
+ dataset download from : https://drivingstereo-dataset.github.io/
+ 
  stereo_match_depth_gpu.cpp using GPU, needs cuda
  
 ##  match difference from two images, stereo vision for self-driving
@@ -19,11 +21,14 @@
 
  ![GitHub Logo](https://github.com/choybeen/3dvision/blob/main/depth_stereo/Capturef.JPG?raw=true)
 
- 	Ptr<StereoBM> left_matcher = StereoBM::create(max_disp, wsize);
-		Ptr<DisparityWLSFilter> wls_filter = createDisparityWLSFilter(left_matcher);
-		Ptr<StereoMatcher> right_matcher = createRightMatcher(left_matcher);
-		Mat filtered_disp_vis;
-		getDisparityVis(filtered_disp, filtered_disp_vis, vis_mult);
-		namedWindow("filtered disparity", WINDOW_AUTOSIZE);
-		imshow("filtered disparity", filtered_disp_vis);
+###  using left to right match, and right to left match, pair matcher has better disparity
+Ptr<StereoBM> left_matcher = StereoBM::create(max_disp, wsize);
+Ptr<DisparityWLSFilter> wls_filter = createDisparityWLSFilter(left_matcher);
+Ptr<StereoMatcher> right_matcher = createRightMatcher(left_matcher);
+	
+then filter :
+wls_filter->filter(left_disp, left, filtered_disp, right_disp);
+then convert disparity to image for showing:
+Mat filtered_disp_vis;
+getDisparityVis(filtered_disp, filtered_disp_vis, vis_mult);
 
