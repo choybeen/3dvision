@@ -4,9 +4,9 @@
  3d VR 
  a 3d cube generated from the bookface features, as the book tranplants, rotates, the cube pose transformes with the books pose.
  
- ## 1) get features from bookface image, and train the feature
+ ### 1) get features from bookface image, and train the feature
  
- ## 2) get current features from new images
+ ### 2) get current features from new images
  
  ## 3) match two sets features, find the fundmental matrix between two images
  
